@@ -1,0 +1,12 @@
+.github-app {
+  max-width: 960px;
+  min-width: 340px;
+  margin: 0 auto;
+  width: 45%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  @include box-shadow(2px, 0px, 10px, $color-gray-text);
+  @include border-radius(5px);
+}

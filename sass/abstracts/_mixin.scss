@@ -1,0 +1,50 @@
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+      -webkit-box-shadow:inset $top $left $blur $color;
+      -moz-box-shadow:inset $top $left $blur $color;
+      box-shadow:inset $top $left $blur $color;
+    } @else {
+      -webkit-box-shadow: $top $left $blur $color;
+      -moz-box-shadow: $top $left $blur $color;
+      box-shadow: $top $left $blur $color;
+    }
+  }
+
+  @mixin rounded-direction($radius-right-side, $radius-value) {
+    @if $radius-right-side {
+        -webkit-border-radius: 0 $radius-value $radius-value 0;
+        -moz-border-radius: 0 $radius-value $radius-value 0;
+        border-radius: 0 $radius-value $radius-value 0;
+    } @else {
+        -webkit-border-radius: $radius-value 0 0 $radius-value;
+        -moz-border-radius: $radius-value 0 0 $radius-value;
+        border-radius: $radius-value 0 0 $radius-value;
+    }
+    
+  }
+
+  @mixin border-radius($radius: 5px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+  }
+
+  @mixin border-radius-each-value($top-left, $top-right, $bottom-right, $bottom-left) {
+    -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+    -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+    border-radius: $top-left $top-right $bottom-right $bottom-left;
+  }
+  
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

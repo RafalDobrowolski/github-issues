@@ -1,0 +1,61 @@
+.sidebar {
+  background-color: rgba(19, 22, 40, 0.95);
+  position: relative;
+  width: auto;
+  @include border-radius-each-value(5px, 5px, 0, 0);
+
+  @media (min-width: 960px) {
+    float: left;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    display: block;
+    @include rounded-direction(false, 5px);
+  }
+
+  &_box {
+    padding: .6rem 1rem;
+    background: $bg-sidebar-buttons;
+    @include rounded-direction(false, 5px);
+
+    @media (max-width: 959px) {
+      display: inline-block;
+      padding: 14px 14px;
+      position: relative;
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    margin-right: .3rem;
+
+    @media (max-width: 959px) {
+      margin: 0;
+      padding: 0;
+    }
+
+    &--red {
+      background-color: $color-light-red;
+    }
+
+    &--green {
+      background-color: $color-light-green;
+    }
+
+    &--yellow {
+      background-color: $color-dark-yellow;
+    }
+  }
+
+}
