@@ -1,0 +1,35 @@
+.sidebar-nav {
+  border-radius: 0 0 0 .3rem;
+  margin-left: .7rem;
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    list-style: none;
+    margin-top: 1rem;
+    margin-right: .6rem;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    padding: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: -1.5rem;
+    fill: $color-white;
+  }
+
+  &__number {
+    color: rgba($color-white, 0.55);
+    font-size: .8rem;
+  }
+}

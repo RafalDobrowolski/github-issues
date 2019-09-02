@@ -22,12 +22,6 @@ section {
   display: block;
 }
 
-@media (max-width: 959px) {
-  nav {
-    display: inline-block;
-  }
-}
-
 html,
 body {
   width: 100%;
@@ -56,18 +50,14 @@ a {
 html {
   // This defines what 1rem is
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
-  background: url(../images/background.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: $color-white;
+  background: url(../../images/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-color: $color-white;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
   font-size: 1rem;
   color: $color-gray;
 }
@@ -83,5 +73,5 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: $color-gray;
-  @include border-radius(10px);
+  @include border-radius(.9rem);
 }

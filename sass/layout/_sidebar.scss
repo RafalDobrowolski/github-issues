@@ -1,49 +1,21 @@
 .sidebar {
   background-color: rgba(19, 22, 40, 0.95);
-  position: relative;
-  width: auto;
-  @include border-radius-each-value(5px, 5px, 0, 0);
+  border-radius: .3rem 0 0 .3rem;
+  flex: 0 0 18%;
 
-  @media (min-width: 960px) {
-    float: left;
-    position: fixed;
-    overflow: hidden;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 20%;
-    display: block;
-    @include rounded-direction(false, 5px);
-  }
-
-  &_box {
-    padding: .6rem 1rem;
+  &__box {
+    display: flex;
+    align-items: center;
+    padding: .9rem .9rem;
     background: $bg-sidebar-buttons;
-    @include rounded-direction(false, 5px);
-
-    @media (max-width: 959px) {
-      display: inline-block;
-      padding: 14px 14px;
-      position: relative;
-      display: inline-block;
-      width: auto;
-      vertical-align: middle;
-      -webkit-font-smoothing: antialiased;
-    }
+    border-radius: .3rem 0 0 0;
   }
 
   &__icon {
-    display: inline-block;
     width: .6rem;
     height: .6rem;
     border-radius: 50%;
-    margin-right: .3rem;
-
-    @media (max-width: 959px) {
-      margin: 0;
-      padding: 0;
-    }
+    margin-right: .5rem;
 
     &--red {
       background-color: $color-light-red;
@@ -57,5 +29,4 @@
       background-color: $color-dark-yellow;
     }
   }
-
 }

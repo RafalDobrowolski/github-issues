@@ -17,13 +17,8 @@ footer,
 header,
 hgroup,
 menu,
-nav,
 section {
   display: block; }
-
-@media (max-width: 959px) {
-  nav {
-    display: inline-block; } }
 
 html,
 body {
@@ -45,18 +40,14 @@ a {
     color: inherit; }
 
 html {
-  font-size: 62.5%;
-  background: url(../images/background.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  font-size: 62.5%; }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: #fff;
+  background: url(../../images/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
   font-size: 1rem;
   color: #ddd; }
 
@@ -75,50 +66,28 @@ body {
 
 .sidebar {
   background-color: rgba(19, 22, 40, 0.95);
-  position: relative;
-  width: auto;
-  -webkit-border-radius: 5px 5px 0 0;
-  -moz-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0; }
-  @media (min-width: 960px) {
-    .sidebar {
-      float: left;
-      position: fixed;
-      overflow: hidden;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 20%;
-      display: block;
-      -webkit-border-radius: 5px 0 0 5px;
-      -moz-border-radius: 5px 0 0 5px;
-      border-radius: 5px 0 0 5px; } }
-  .sidebar_box {
-    padding: .6rem 1rem;
+  border-radius: .3rem 0 0 .3rem;
+  -webkit-box-flex: 0;
+  flex: 0 0 18%;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between; }
+  .sidebar__box {
+    display: flex;
+    align-self: stretch;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: .9rem .9rem;
     background: #101022;
-    -webkit-border-radius: 5px 0 0 5px;
-    -moz-border-radius: 5px 0 0 5px;
-    border-radius: 5px 0 0 5px; }
-    @media (max-width: 959px) {
-      .sidebar_box {
-        display: inline-block;
-        padding: 14px 14px;
-        position: relative;
-        display: inline-block;
-        width: auto;
-        vertical-align: middle;
-        -webkit-font-smoothing: antialiased; } }
+    border-radius: .3rem 0 0 0; }
   .sidebar__icon {
-    display: inline-block;
     width: .6rem;
     height: .6rem;
     border-radius: 50%;
-    margin-right: .3rem; }
-    @media (max-width: 959px) {
-      .sidebar__icon {
-        margin: 0;
-        padding: 0; } }
+    margin-right: .5rem; }
     .sidebar__icon--red {
       background-color: #ff594f; }
     .sidebar__icon--green {
@@ -126,18 +95,50 @@ body {
     .sidebar__icon--yellow {
       background-color: #ffbc1b; }
 
+.sidebar-nav {
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0 0 0 .3rem; }
+  .sidebar-nav__list {
+    list-style: none; }
+  .sidebar-nav__link {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .sidebar-nav__icon {
+    line-height: 0;
+    position: relative;
+    margin-right: .6rem;
+    width: 1.3rem;
+    height: 1.3rem; }
+    .sidebar-nav__icon--all {
+      background: url(../../images/icon-github.svg) no-repeat;
+      background-size: cover; }
+    .sidebar-nav__icon--open {
+      background: url(../../images/icon-open-issue.svg) no-repeat;
+      background-size: cover; }
+    .sidebar-nav__icon--close {
+      background: url(../../images/icon-closed-issue.svg) no-repeat;
+      background-size: cover; }
+  .sidebar-nav__number {
+    display: inline-block;
+    position: relative;
+    top: .6rem;
+    margin-right: 0px; }
+    @media (max-width: 959px) {
+      .sidebar-nav__number {
+        margin-left: .6rem; } }
+
 .github-app {
-  max-width: 960px;
-  min-width: 340px;
-  margin: 0 auto;
-  width: 45%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-box-shadow: 2px 0px 10px #333;
-  -moz-box-shadow: 2px 0px 10px #333;
-  box-shadow: 2px 0px 10px #333;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px; }
+  max-width: 60rem;
+  min-width: 21rem;
+  margin: 50vh auto 0;
+  transform: translateY(-50%);
+  background-color: white;
+  -webkit-box-shadow: 0.1rem 0 0.6rem #333;
+  -moz-box-shadow: 0.1rem 0 0.6rem #333;
+  box-shadow: 0.1rem 0 0.6rem #333;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+  display: flex; }
