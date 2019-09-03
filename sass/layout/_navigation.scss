@@ -1,35 +1,56 @@
 .sidebar-nav {
   border-radius: 0 0 0 .3rem;
-  margin-left: .7rem;
   display: flex;
   flex-direction: column;
 
   &__list {
     list-style: none;
-    margin-top: 1rem;
-    margin-right: .6rem;
   }
 
   &__item {
-    margin-bottom: 1rem;
+    padding: .5rem 0 .5rem .5rem;
+
+    @media only screen and (max-width: 56.25em) {
+      padding: .3rem 0 .3rem .3rem;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $color-light-red;
+    }
   }
 
   &__link {
-    padding: .6rem;
+    position: relative;
+    padding: .8rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    @media only screen and (max-width: 56.25em) {
+      padding: .2rem;
+    }
   }
 
   &__icon {
     width: 1.3rem;
     height: 1.3rem;
-    margin-right: -1.5rem;
+    margin-right: 1rem;
     fill: $color-white;
+
+    @media only screen and (max-width: 56.25em) {
+      margin-right: .3rem;
+    }
   }
 
   &__number {
     color: rgba($color-white, 0.55);
     font-size: .8rem;
+    margin-left: 1rem;
+    position: absolute;
+    right: 1rem;
+
+    @media only screen and (max-width: 56.25em) {
+      right: .5rem;
+    }
   }
 }

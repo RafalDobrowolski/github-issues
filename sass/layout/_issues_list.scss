@@ -1,0 +1,53 @@
+.issues-list {
+  flex: 1;
+  background-color: $bg-light-gray;
+  border-radius: 0 .3rem .3rem 0;
+  overflow-y: auto;
+  padding: .5rem .8rem;
+  max-height: 28rem;
+
+  &__header {
+    time {
+      color: $color-dark-gray;
+      font-size: .8rem;
+    }
+  }
+
+  &__content {
+    background-color: $bg-white;
+    color: $color-dark-text;
+    border-radius: .3rem;
+    border: .1rem solid $color-dark-gray;
+    padding: .6rem;
+    margin: .3rem 0;
+    max-height: 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__checkbox {
+    position: absolute;
+    right: 1rem;
+    display: inline-flex;
+    display: none;
+  }
+
+  &__label {
+    position: absolute;
+    right: 1rem;
+    display: inline-flex;
+  }
+
+  &__icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    fill: $color-black;
+    cursor: pointer;
+  }
+
+  &__checkbox:checked+&__label &__icon {
+    fill: $color-white;
+    stroke: $color-dark-gray;
+  }
+}

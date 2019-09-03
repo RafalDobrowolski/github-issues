@@ -1,15 +1,9 @@
 .github-app {
   max-width: 60rem;
-  min-width: 21rem;
+  min-width: 15rem;
   margin: 50vh auto 0;
   transform: translateY(-50%);
   @include box-shadow(.1rem, 0, .6rem, $color-gray-text);
   @include border-radius(.3rem);
   display: flex;
-}
-
-.issues-view {
-  flex: 1;
-  background-color: $color-white;
-  border-radius: 0 .3rem .3rem 0;
 }
